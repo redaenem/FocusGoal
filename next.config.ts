@@ -19,9 +19,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'export',
-basePath: "/FocusGoal",
-assetPrefix: "/FocusGoal/",
+  output: 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

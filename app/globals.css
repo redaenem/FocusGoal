@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f0f0f;
+  --color-card: #1a1a1a;
+  --color-primary: #6C63FF;
+  --color-secondary: #2c2c2c;
+  --color-success: #00C853;
+  --color-error: #FF5252;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+}
+
+@layer base {
+  * {
+    @apply border-white/5;
+  }
+  body {
+    @apply bg-background text-text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Hide tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+  @apply h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply w-4 h-4 bg-primary rounded-full appearance-none shadow-lg shadow-primary/20;
+}
